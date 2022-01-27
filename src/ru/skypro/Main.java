@@ -1,9 +1,7 @@
 package ru.skypro;
 
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Main {
 
@@ -33,11 +31,11 @@ public class Main {
 
     // ------------------------------------------к задаче 1
     public static void printYearEven(int years) {
-        boolean evenYear = yearFourth(years);
+        boolean evenYear = isLeapYear(years);
         printYear(years, evenYear);
     }
 
-    public static boolean yearFourth(int years) {
+    public static boolean isLeapYear(int years) {
         return years % 4 == 0 || years % 400 == 0 && years % 100 != 0;
     }
 
@@ -94,15 +92,6 @@ public class Main {
             }
         }
         System.out.println("Дублей не найдено.");
-        /*char prevChar = Character.MAX_VALUE; // задается значение (любое из предлагаемых, например, MAX_VALUE) которое маловероятно встретиться и с которым можно сравнить
-        for (char letter : letters) {
-            if (letter == prevChar) {
-                System.out.println("Найден дубль по символу - " + letter);
-                return;
-            }
-            prevChar = letter;
-        }
-        System.out.println("Дублей не найдено.");*/
     }
 
     // -------------------------------------------------------------------к Задаче 5
